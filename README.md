@@ -1,30 +1,23 @@
+# 🚗 Corporate Garage Management System## 📌 Descrizione del ProgettoPiattaforma gestionale per un parco auto aziendale. Il sistema centralizza il monitoraggio di circa 50 veicoli, permettendo la gestione di chilometraggio, carburante e manutenzioni, con accessi differenziati tra Amministrazione e Dipendenti.
 
-Richiesta
-una app web che gestisce la flotta di auto dell’azienda. deve essere utilizzabile sia da pc che telefono, ci deve essere almeno un master che controlla ogni movimento,
+---
+## 🔐 Logica dei Permessi (RBAC)
+Il sistema implementa una **Row-Level Security** basata sull'utente loggato:
+### 👑 Amministratore (Boss)- **Accesso:** Totale su tutti i 50 veicoli.- **Poteri:** Può creare, modificare ed **eliminare** qualsiasi auto o evento.- **Esclusività:** Gestisce l'assegnazione dell'auto (`owner`) e la foto ufficiale (`imageURL`).
+### 👤 Dipendente (User)- **Accesso:** Vede **solo** l'auto a lui assegnata.- **Poteri:** Modifica esclusivamente i dati dinamici (Km, Benzina, Eventi).- **Restrizioni:** Non può eliminare il veicolo né modificare dati anagrafici o foto.
 
+---
+## 🛠️ Stack Tecnologico- **Backend:** SAP Cloud Application Programming Model (CAP) - Node.js.- **Database:** SQLite (per sviluppo).- **Frontend:** SAP Fiori Elements (List Report & Object Page).- **Sicurezza:** Mock Authentication con permessi granulari via `@restrict`.
 
-Specifiche
-User (dipendenti): può eliminare, modificare e  aggiungere solo le informazioni della propria auto
-Benzina
-Chilometraggio
-Presenza
-Eventi (tagliando, cambio gomme, problema meccanico, revisione)
-
-Come fare ad accedere:
-username: …..@eonegroup.it
-psw: (numero di matricola)!
-
-Admin: controllo totale (Alberto Sassi)
-può eliminare, modificare e  aggiungere a suo piacimento ogni dato di ogni singola auto
-
-Come fare ad accedere:
-username: …..@eonegroup.it
-psw: Alb3rt0S4ss1!
+---
+## 📊 Struttura Dati
+| Entità | Descrizione |
+| :--- | :--- |
+| **Cars** | Anagrafica veicolo, proprietario, foto, km e carburante. |
+| **CarEvents** | Storico interventi (Tagliandi, gomme, guasti). |
+| **Manufacturers** | Elenco dei brand automobilistici. |
 
 
-Specifiche tecniche
-Framework : Cap
-Database : Postgresql
-Visual Studio Code: ambiente di sviluppo
 
-
+---
+## 🚀 Installazione e Avvio
