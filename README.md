@@ -20,8 +20,53 @@ Il sistema implementa una **Row-Level Security** basata sull'utente loggato:
 
 
 ---
-## 🚀 Passaggi
+# Setup Progetto SAP CAP + PostgreSQL
 
-fare npm init -y
+## 🚀 Creazione progetto
+
+```bash
+# creare cartella progetto
+mkdir fleet-project
+cd fleet-project
+
+# inizializzare progetto Node
+npm init -y
+
+# installare CAP
 npm install @sap/cds
+
+# installare supporto PostgreSQL
 npm install @cap-js/postgres
+
+# inizializzare struttura CAP
+cds init
+```
+
+---
+
+## ▶️ Avvio progetto
+
+```bash
+# avviare server CAP
+cds watch
+```
+
+---
+
+## 🐘 Deploy database
+
+```bash
+# creare tabelle nel database
+cds deploy
+```
+
+---
+
+## 👥 Quando qualcuno clona la repo
+
+```bash
+git clone <repo>
+cd fleet-project
+npm install
+cds watch
+```
