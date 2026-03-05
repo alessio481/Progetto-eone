@@ -20,4 +20,8 @@ Il sistema implementa una **Row-Level Security** basata sull'utente loggato:
 
 
 ---
-## 🚀 Installazione e Avvio
+## 🚀 Passaggi
+
+fare npm init -y
+npm install @sap/cds
+npm install @cap-js/postgres

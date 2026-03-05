@@ -1,0 +1,25 @@
+{
+  "name": "progetto-eone",
+  "version": "1.0.0",
+  "description": "---\r ## 🔐 Logica dei Permessi (RBAC)\r Il sistema implementa una **Row-Level Security** basata sull'utente loggato:\r ### 👑 Amministratore (Boss)- **Accesso:** Totale su tutti i 50 veicoli.- **Poteri:** Può creare, modificare ed **eliminare** qualsiasi auto o evento.- **Esclusività:** Gestisce l'assegnazione dell'auto (`owner`) e la foto ufficiale (`imageURL`).\r ### 👤 Dipendente (User)- **Accesso:** Vede **solo** l'auto a lui assegnata.- **Poteri:** Modifica esclusivamente i dati dinamici (Km, Benzina, Eventi).- **Restrizioni:** Non può eliminare il veicolo né modificare dati anagrafici o foto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alessio481/Progetto-eone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alessio481/Progetto-eone/issues"
+  },
+  "homepage": "https://github.com/alessio481/Progetto-eone#readme",
+  "dependencies": {
+    "@cap-js/postgres": "^2.1.3",
+    "@sap/cds": "^9.7.1"
+  }
+}
