@@ -1,0 +1,33 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# CAP / CDS
+*.db
+gen/
+srv/gen/
+db/gen/
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Build / dist
+dist/
+out/
+build/
+
+# IDE
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
